@@ -7,9 +7,17 @@ function callback(value, index, array) {
     console.log('value: ', value.name);
     console.log("-----------------------------------")
 }
+
+//Metodo Map
 const names = people.map((value) => {
     return value.name;
 });
 people.forEach(callback);
 people.name = names;
-console.log(people.name);
+console.log(people.name); 
+
+// metodo find
+people.find((value, index, array) => {
+    const isJoao = value.name === "João";
+    return isJoao;
+});
